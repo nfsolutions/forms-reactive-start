@@ -36,7 +36,7 @@
         <div formArrayName="hobbies">
           <h4>Your hobbies</h4>
           <button class="btn btn-default" type="button" (click)="onAddHobby()">Add hobby</button>
-        <div class="form-group" *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
+        <div class="form-group" *ngFor="let hobbyControl of signupForm.get('hobbies')['controls']; let i = index">
           <input type="text" class="form-control" [formControlName]="i">
         </div>
         </div>
